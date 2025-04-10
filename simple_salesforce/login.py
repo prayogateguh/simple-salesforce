@@ -309,6 +309,8 @@ def token_login(
     <approved URI>.""")
         raise SalesforceAuthenticationFailed(except_code, except_msg)
 
+    print('json_response')
+    print(json_response)
     access_token = json_response.get('access_token')
     instance_url = json_response.get('instance_url')
 
